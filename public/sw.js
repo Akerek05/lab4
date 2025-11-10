@@ -13,3 +13,5 @@ return networkResponse; // Visszadjuk
 }
 }
 self.addEventListener("fetch", e => e.respondWith(impl(e))); // Eseményre feliratkozás
+self.addEventListener("push", e => e.respondWith(impl(e))); // Eseményre feliratkozás
+self.registration.showNotification("Chat Notification",e.data?.text(),)
